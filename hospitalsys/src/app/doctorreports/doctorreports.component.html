@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="script/script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>
+            HOSPITAL MANAGEMENT SYSTEM
+        </title>
+    </head>
+        <body>
+            
+            <div class="container">
+                <table class="table table-bordered">
+                    <thead>
+                        <th>Firstname</th>
+                        <th>LastName</th>
+                        <th>Department</th>
+                        <th>Email Id</th>
+                        <th>Phone</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let doc of doctorarr">
+                            <td>{{doc.firstname}}</td>
+                            <td>{{doc.lastname}}</td>
+                            <td>{{doc.dept}}</td>
+                            <td>{{doc.email}}</td>
+                            <td>{{doc.phone}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </body>      

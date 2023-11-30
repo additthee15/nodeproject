@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="script/script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>
+            HOSPITAL MANAGEMENT SYSTEM
+        </title>
+    </head>
+        <body>
+            
+            <div class="container">
+                <div class="panel panel-primary" style="width: 450px; height: 300px; margin-top: 20px;">
+                    <div class="panel-heading" style="font-size: medium;">Doctor Login</div>
+                    <div class="form-group">
+                        <form>
+                            <div class="row-md-2" style="margin-top: 10px;">
+                                <label for="uname" style="margin-left: 10px;">Username</label>
+                                <input type="text" class="form-control" name="uname" id="uname" [(ngModel)]="uname" style="width: 200px; height: 25px; margin-left: 10px;"> 
+                            </div>
+                            <div class="row-md-2" style="margin-top: 10px;">
+                                <label for="pwd" style="margin-left: 10px;">Password</label>
+                                <input type="password" class="form-control" name="pwd" id="pwd" [(ngModel)]="pwd" style="width: 200px; height: 25px; margin-left: 10px;">
+                            </div>
+                            <div class="col-md-2" style="margin-top: 20px;">
+                                <button class="btn-sm btn-success" (click)=login(uname,pwd)>Login</button>
+                            </div>
+                            <div class="col-md-2" style="margin-top: 20px;">
+                                <button class="btn-sm btn-danger" value="Cancel">Cancel</button>
+                            </div>
+                            <div class="col-md-3" style="margin-top: 20px;">
+                                <a routerLink="/docreg">Doctor Registration</a>
+                            </div>
+                        </form>
+                        <div *ngIf="errormsg" style="margin-top: 12px;">
+                            <p style="font-weight: bold;color: red;">{{errormsg}}</p>
+                        </div>
+                    </div>
+                  
+                </div>
+               
+            </div>
+        </body>
+        
+</html>
